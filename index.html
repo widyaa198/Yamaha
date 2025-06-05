@@ -1,74 +1,144 @@
-<!DOCTYPE html>
- <html>
- <head>
- <link rel="stylesheet" href="style.css">
- </head>
- <body>
+<html>
+<head>
+<title> CSS Website Layout</title>
+<style>
+	body {
+		margin: 0;
+	}
+	/Style the header/
+	.header{
+		background-color: grey;
+		padding: 20px;
+		text-align: left;
+		color: white;1
+	}
+	header h1{
+		font-size: 50px;
+	}
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		font-family: Arial;
+		padding:10px;
+		background: #f1f1f1;
+	}
+	.topnav{
+		overflow: hidden;
+		background-color: #333;
+	}
+	.topnav a{
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	.topnav a:hover {
+		background-color: ddd;
+		color: black;
+	}
+	.leftcolumn {
+		float:left;
+		width:75%;
+	}
+	.rightcolumn {
+		float:left;
+		width:25%;
+		background-color: #f1f1f1;
+		padding-left: 20px;
+	}
+	fakeimg {
+		background-color: #aaa;
+		width:100%;
+		padding:20px;
+	}
+	.card{
+		background-color: white;
+		padding:20px;
+		margin-top: 20px;
+	}
+	.row::after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+	.footer{
+		padding:20px;
+		text-align: center;
+		background:#ddd;
+		margin-top: 20px;
+	}
+	@media screen and (max-width:800px){
+		.leftcolumn, .rightcolumn{
+			width:100%;
+			padding:0;
+		}
+	}
+	@media screen and (max-width:400px){
+		.topnav a{
+			float:none;
+			width:100%;
+		}
+	}
+</style>
+</head>
+	<body>
+		<div class="header">
+			<h1>YAMAHA</h1>
+			<p>Yamaha Semakin di Depan.</p>
+		</div>
+		<div class="topnav">
+		<a href="index.html">HOME</a>
+		<a href="contact.html">CONTACT</a>
+		<a href="account.html">ACCOUNT</a>
+		<a href="link.html"style="float:right">Link</a>
+	</div>
+	<div class="row">
+		<div class="leftcolumn">
+			<div class="card">
+				<h2>NMAX</h2>
+				<h5>Otomotif, 21 April 2025</h5>
+				<img src="nmax.jpg" style="height: 600px;width:100%;">
+				<p>Yamaha.</p>
+				<p><p>Yamaha NMAX merupakan jenis motor matic dengan kapasitas mesin 150 cc dapat mencapai kecepatan 100km/jam dalam waktu satu menit, Untuk harganya dibandrol dengan harga OTR sumedang Rp.35.000.000 belum termasuk pajak.</p>
+			</div>
+			<div class="card">
+				<h2>AEROX</h2>
+				<h5>Title description, Sep 2, 2017</h5>
+				<img src="aerox.jpg" style="height: 600px;width:100%;">
+				<p>Yamaha.</p>
+				<p>Yamaha AEROX merupakan jenis motor matic dengan kapasitas mesin 150 cc dapat
+                   mencapai kecepatan 100km/jam dalam waktu satu menit, Untuk harganya dibandrol
+                   dengan harga OTR sumedang Rp. 35.000.000 belum termasuk pajak.</p>
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div class="card">
+				<h2>About Me</h2>
+				<img src="yamaha.jpg" style="height:200px;width:400;">
+				<p>Yamaha adalah salahsatu perusahaan multinasional yang beroperasi dalam
+                   memasarkan produk otomotif yang mencakup sepeda motor sparepart dan lain-lain.</p>
 
- <div class="header">
-      <class>YAMAHA</h1>
-      <p>Yamaha Semakin di Depan.</h1>
-      </div>
-
- <div class="topnav">
- <a href="#">Home</a>
- <a href="#">Produk</a>
- <a href="#">Sales</a>
- <a href="#">About</a>
- </div>
-
- <div class="row">
- <div class="leftcolumn">
-
- <div class="card">
-      <h2>NMAX</h2>
-      <h5>Otomotif, 21 April 2025</h5>
-      <img src="nmax.jpg"style="height:300px;width="25%">
-      <p>Yamaha NMAX merupakan jenis motor matic dengan kapasitas mesin 150 cc dapat mencapai kecepatan 100km/jam dalam waktu satu menit, Untuk harganya dibandrol dengan harga OTR sumedang Rp.35.000.000 belum termasuk pajak</p>
- </div>
-
- <div class="card">
- <h2>AEROX</h2>
- <h5>Title description, Sep 2, 2017</h5>
- <img src="aerox.jpg"style="height:300px;width="25%">
- <p>Yamaha AEROX merupakan jenis motor matic dengan kapasitas mesin 150 cc dapat
-mencapai kecepatan 100km/jam dalam waktu satu menit, Untuk harganya dibandrol
-dengan harga OTR sumedang Rp. 35.000.000 belum termasuk pajak.</p>
- </div>
-
-</div>
-</div>
-
- 
- <div class="rightcolumn">
-<div class="card">
-<h2>About Me</h2>
- <img src="yamaha.jpg"style="height:300px;width="25%">
- <p>Yamaha adalah salahsatu perusahaan multinasional yang beroperasi dalam
- memasarkan produk otomotif yang mencakup sepeda motor sparepart dan lain-lain</p>
-</div>
-
- <div class="card">
-<h3>Popular Post</h3>
-<img src="yamaha1.jpg"style="height:300%"width="50%">
-<p>Motor Yamaha 1</p>
-<img src="yamaha2.jpg"style="height:300%"width="50%">
-<p>Motor Yamaha 2</p> 
-<img src="yamaha3.jpg"style="height:300%"width="50%">
-<p>Motor Yamaha</p>
- </div>
-	 
- <div class="card">
- <h3>Follow Me</h3>
- <p>IG:Wdyaaid</p>
- </div>
-
- </div>
- </div>
-
- <div class="footer">
- <p>copyright &copy; Yamaha, All Rights reserved</p>
- </div>
-
- </body>
- </html>
+			</div>
+			<div class="card">
+				<h3>Popular Post</h3>
+				<img src="yamaha1.jpg" style="height:200px;width:400;">
+				<div class="fakeimg"><p>Motor Yamaha</p></div>
+				<img src="yamaha2.jpg" style="height:200px;width:400;">
+				<div class="fakeimg"><p>Motor Yamaha</p></div>
+				<img src="yamaha3.jpg" style="height:200px;width:400;">
+				<div class="fakeimg"><p>Motor Yamaha</p></div>
+				</div>
+				<div class="card">
+					<h3>Follow Me</h3>
+					<p>IG:Wdyaaid</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>copyright &copy; Yamaha, All Rights Reserved</p>
+		</div>
+	</body>
+	</html>
